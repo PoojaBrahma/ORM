@@ -40,9 +40,9 @@ admin.py
 from django.contrib import admin
 from .models import Employee,EmployeeAdmin
 admin.site.register(Employee,EmployeeAdmin)
-``
+```
 # OUTPUT
-c:\Users\admin\Pictures\Screenshots\Screenshot 2024-12-05 235409.png
+![alt text](<Screenshot 2024-12-05 235409.png>)
 
 # RESULT
 Thus the program for creating a database using ORM hass been executed successfully
