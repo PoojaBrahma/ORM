@@ -19,32 +19,32 @@ Execute Django admin and create details for 10 books
 
 # PROGRAM
 ```python
-models.py
+models.py:
 
 from django.db import models
 from django.contrib import admin
-class Employee (models.Model):
-    eid=models.CharField(max_length=20,help_text="Employee_ID")
-    name=models.CharField(max_length=100)
-    salary=models.IntegerField()
-    age=models.IntegerField()
-    email=models.EmailField()
+class bankloan(models.Model):
+    Name=models.CharField(max_length=100)
+    Accountno=models.IntegerField(primary_key="Accountno")
+    Startdate=models.DateField()
+    Email=models.EmailField()
+    Mobilenumber=models.IntegerField()
+    Amount=models.IntegerField()
 
-class EmployeeAdmin(admin.ModelAdmin):
-    list_disply=('eid','name','salary','age','email')
+class bankloanAdmin(admin.ModelAdmin):
+    list_display=('Name','Accountno','Startdate','Email','Mobilenumber','Amount')
 
 
-admin.py
+admin.py:
 
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
-admin.site.register(Employee,EmployeeAdmin)
+from .models import bankloan,bankloanAdmin
+admin.site.register(bankloan,bankloanAdmin)
 ```
 # OUTPUT
-![Screenshot 2024-12-05 235409](https://github.com/user-attachments/assets/2b0a4938-41b9-40cd-a55c-88a8e19cef1a)
-![Screenshot 2024-12-07 155014](https://github.com/user-attachments/assets/75e4d90a-a694-4008-a0b5-38fb3f6487ce)
-![Screenshot 2024-12-07 155039](https://github.com/user-attachments/assets/4ce9a0fd-daeb-47e9-8da6-05a4bcadf1d1)
-
+![WhatsApp Image 2024-12-07 at 10 48 41 PM](https://github.com/user-attachments/assets/ce054704-566b-4995-8332-e009eb5b9213)
+![Screenshot 2024-12-07 230142](https://github.com/user-attachments/assets/99e1f565-9785-45b1-a337-efc6ba2f5471)
+![Screenshot 2024-12-07 233409](https://github.com/user-attachments/assets/44537609-64a9-4a71-9cb3-4cc766da5817)
 
 # RESULT
 Thus the program for creating a database using ORM hass been executed successfully
